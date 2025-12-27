@@ -7,13 +7,19 @@
  * Import dependencies
  */
 @use "dependencies";
+@use "variables";
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
- @use "layouts/home";
+@use "layouts/home";
+@use "components/c-navbar";
+@use "components/c-slider";
+@use "components/c-ponente-card";
+
+ 
 
 /**
  * Do NOT include anything else in this file!

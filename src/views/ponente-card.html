@@ -1,0 +1,22 @@
+<article class="ponente-card {{featured === 'true' ? 'ponente-card--destacado' : ''}}">
+    <div class="flex justify-center mb-6">
+        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+            <img src="assets/images/{{img}}" 
+                 alt="{{name}}" 
+                 class="w-full h-full object-cover rounded-full">
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center flex-grow text-center  px-4 pb-6">
+        <h3 class="ponente-card__name">{{name}}</h3>
+        <p class="ponente-card__title">{{role}}</p>
+        
+        <p class="ponente-card__bio">
+            {{bio}}
+        </p>
+
+        <button class="ponente-card__btn mt-auto">
+            Ver perfil
+        </button>
+    </div>
+</article>

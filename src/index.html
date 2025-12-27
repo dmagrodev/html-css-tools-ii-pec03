@@ -8,19 +8,53 @@
     <title>UOC Boilerplate</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <include src="./views/header.html" id = "inicio"></include>
+    <section class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 tablet:grid-cols-3 gap-y-6 gap-x-8 h-auto">
+        
+        <div class="tablet:col-span-3 tablet:row-start-1 flex items-end justify-center py-4">
+          <h1 class="text-6xl tablet:text-8xl font-serif leading-none uppercase tracking-tighter m-0 uppercase text-center">
+            <span class="text-primary scale-110  font-bold">Fuego </span>
+            <span class="text-secondary scale-80">lento</span>
+          </h1>
+        </div>
+
+        <div class="tablet:col-span-3 tablet:row-start-2 flex items-start justify-center mb-4">
+          <p class="text-secondary/70 font-serif text-4xl m-0 tracking-wide text-center">Jornadas Gastronómicas 2025</p>
+        </div>
+
+        <div class="tablet:col-start-1 tablet:col-span-2 tablet:row-start-3 tablet:row-span-2 rounded-sm overflow-hidden">
+          <include src="./views/slider.html"></include>
+        </div>
+
+        <div class="tablet:col-start-3 tablet:row-start-3 flex items-start p-4 self-start">
+          <p class="text-sm leading-relaxed text-light font-serif border-primary/80 pl-4 pt-4 tablet:pt-0 border-t-4 tablet:border-t-0 tablet:border-l-4 m-0">
+                SLOW FIRE, a fuego lento, es el punto de encuentro de la alta cocina con la tradición, el fuego lento y la brasa. 
+                Esta jornada se adentra en el corazón de la gastronomía ancestral, explorando platos típicos y fusionandolos con las nuevas técnicas contemporáneas. 
+                Contaremos con ponentes de excepción, como el aclamado chef Pedro Fernandez, ganador del premio al Mejor Cocido de Madrid, quien compartirá 
+                sus secretos sobre los tiempos de cocción perfectos.<br>
+                Además, dedicaremos una sección especial a la repostería tradicional, 
+                debatiendo cómo los postres de toda la vida se reinventan en la cocina actual, manteniendo la esencia del sabor auténtico.
+          </p>
+        </div>
+
+        <div class="tablet:col-start-3 tablet:row-start-4 flex flex-col items-center justify-center py-6">
+          <div class="text-center group">
+            <span class="block text-5xl font-serif text-secondary group-hover:scale-110 transition-transform">13 y 14</span>
+            <span class="block text-md tracking-[0.3em] text-secondary/60 uppercase py-4 font-bold">Diciembre</span>
+          </div>
+        </div>
+
+        <div class="tablet:col-span-3 tablet:row-start-5 flex items-center justify-center pt-10">
+          <a href="index.html" 
+            class="bg-primary/90 hover:bg-primary/40 text-white py-4 px-16 rounded-sm transition-all no-underline  tracking-[0.2em] shadow-xl text-lg font-serif">
+            Reserva tú Plaza
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <include src="./views/event-details.html"></include>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

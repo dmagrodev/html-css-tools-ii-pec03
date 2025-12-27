@@ -1,0 +1,200 @@
+<section class="container bg-white mx-auto  px-4 py-10">
+  <h2 class="text-center mb-12 mt-12 text-5xl font-serif text-primary uppercase tracking-wider">Próximos Eventos</h2>
+  
+  <div class="grid grid-cols-1 tablet:grid-cols-3 gap-6 mb-12">
+    <button onclick="toggleEvent('madrid')" 
+        class="p-4 bg-primary text-white font-serif text-lg rounded-sm shadow-xl hover:bg-secondary transition-all cursor-pointer border-none tracking-widest">
+        Madrid - Palacio Cibeles
+    </button>
+
+    <button onclick="toggleEvent('toledo')" 
+        class="p-4 bg-white text-primary border-2 border-primary/20 font-serif text-lg rounded-sm shadow-md hover:border-primary transition-all cursor-pointer tracking-widest">
+        Toledo - Centro San Marcos
+    </button>
+
+    <button onclick="toggleEvent('jerez')" 
+        class="p-4 bg-white text-primary border-2 border-primary/20 font-serif text-lg rounded-sm shadow-md hover:border-primary transition-all cursor-pointer  tracking-widest">
+        Jerez - IFECA
+    </button>
+  </div>
+
+  <div id="info-madrid" class="event-content hidden opacity-0 transition-opacity duration-500">
+    <div class="bg-white p-6 tablet:p-10 shadow-2xl rounded-sm  border-primary">
+    
+    <div class="grid grid-cols-1 tablet:grid-cols-2 gap-10">
+      
+      <div class="hidden tablet:block w-full h-[300px] tablet:h-full min-h-[400px] overflow-hidden rounded-sm shadow-inner bg-dark/5">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5584.625976636327!2d-3.694822766687012!3d40.41925553283462!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b5b19565f%3A0x2dcaa85f4558b7cb!2sPalacio%20de%20Cibeles%2C%20Retiro%2C%2028014%20Madrid!5e1!3m2!1ses!2ses!4v1766798622041!5m2!1ses!2ses" 
+          class="w-full h-full border-none grayscale hover:grayscale-0 transition-all duration-1000" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="flex flex-col">
+        <a href="https://maps.app.goo.gl/kFG2S7SDqA4hbgFN6" class="text-primary font-serif text-xl no-underline flex items-center mb-2 hover:text-secondary">
+          <i class="fas fa-location-dot mr-3"></i> Dirección
+        </a>
+        <p class="text-dark/80 font-sans pl-8 mb-6 uppercase tracking-wider text-sm leading-relaxed">
+          PLAZA DE CIBELES, 1 <br> 28014 MADRID
+        </p>
+
+        <h6 class="font-bold text-primary mb-1 uppercase text-xs tracking-widest">Zona / Referencia</h6>
+        <p class="text-dark/80 text-sm italic pl-8 mb-8 border-l-4 border-primary/20">
+          En el corazón del Paseo del Prado, frente a la Fuente de Cibeles y junto al Banco de España.
+        </p>
+
+        <h5 class="font-serif text-xl text-primary mb-4 flex items-center">
+          <i class="fas fa-route mr-3"></i> Opciones de Transporte Público
+        </h5>
+        
+        <ul class="list-none p-0 pl-8 space-y-4">
+          <li class="text-sm flex items-start">
+            <i class="fas fa-subway mr-3 text-info mt-1"></i>
+            <span><strong class="text-dark">Metro:</strong> Estación <span class="bg-danger text-white px-2 py-0.5 rounded-sm text-[10px] font-bold">Banco de España</span> (Línea 2).</span>
+          </li>
+          <li class="text-sm flex items-start">
+            <i class="fas fa-bus mr-3 text-warning mt-1"></i>
+            <span><strong class="text-dark">Autobús (EMT):</strong> Múltiples líneas (1, 2, 5, 9, 10, 27...).</span>
+          </li>
+          <li class="text-sm flex items-start">
+            <i class="fas fa-train mr-3 text-success mt-1"></i>
+            <span><strong class="text-dark">Cercanías:</strong> Estación <span class="bg-success text-white px-2 py-0.5 rounded-sm text-[10px] font-bold">Recoletos</span>.</span>
+          </li>
+        </ul>
+
+        <div class="mt-8 p-4 bg-secondary/5 border-l-4 border-secondary flex items-center gap-4">
+          <i class="fas fa-walking text-secondary text-xl"></i>
+          <p class="text-xs text-secondary m-0">
+            <strong class="block uppercase tracking-tighter">Recomendación:</strong>
+            Dada su centralidad, la mejor opción es el Metro o Bus. Evita el coche (Zona ZBE).
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    <div id="info-toledo" class="event-content hidden opacity-0 transition-all duration-500 mt-6">
+    <div class="bg-white p-6 tablet:p-10 shadow-2xl rounded-sm ">
+        
+        <div class="grid grid-cols-1 tablet:grid-cols-2 gap-10">
+        
+        <div class="hidden tablet:block w-full h-full min-h-[400px] overflow-hidden rounded-sm shadow-inner bg-dark/5 relative">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1407.756155892836!2d-4.027110461283836!3d39.857055792883756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6a0ba6f08236e5%3A0x4c12a33ca82422f5!2sCentro%20Cultural%20San%20Marcos!5e1!3m2!1ses!2ses!4v1766799677726!5m2!1ses!2ses"
+            class="absolute inset-0 w-full h-full border-none grayscale hover:grayscale-0 transition-all duration-1000" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="https://maps.app.goo.gl/BWP3FuFT8TzcHrn56" target="_blank" class="text-primary font-serif text-2xl no-underline flex items-center mb-2 hover:text-secondary">
+            <i class="fas fa-location-dot mr-3"></i> Dirección
+            </a>
+            <p class="text-dark/70 font-sans pl-8 mb-6 uppercase tracking-wider text-sm leading-relaxed">
+            CALLE TRINIDAD, 10 <br> 45002 TOLEDO
+            </p>
+
+            <h6 class="font-bold text-primary mb-1 uppercase text-xs tracking-widest">Zona / Casco Histórico</h6>
+            <p class="text-dark/60 text-sm italic pl-8 mb-8 border-l-4 border-primary/20  bg-secondary/5">
+            Centro Histórico de Toledo, junto a la Plaza de Zocodover.
+            </p>
+
+            <h5 class="font-serif text-xl text-primary mb-4 flex items-center">
+            <i class="fas fa-bus-simple mr-3"></i> Recomendaciones de Transporte
+            </h5>
+            
+            <ul class="list-none p-0 pl-8 space-y-4">
+            <li class="text-sm flex items-start">
+                <i class="fas fa-shoe-prints mr-3 text-success mt-1"></i>
+                <span>
+                <strong class="text-dark">Lo más recomendable:</strong> Acceso en coche limitado. 
+                Aparcar en Corralillo de San Miguel o Recaredo y <span class="font-bold">acceder a pie</span>.
+                </span>
+            </li>
+            <li class="text-sm flex items-start">
+                <i class="fas fa-bus mr-3 text-warning mt-1"></i>
+                <span>
+                <strong class="text-dark">Bus Urbano:</strong> Parada en Plaza de Zocodover (5 min a pie). Líneas 5, 6, 12.
+                </span>
+            </li>
+            </ul>
+
+            <div class="mt-8 p-4 bg-secondary/5 border-l-4 border-secondary flex items-center gap-4">
+            <i class="fas fa-mountain-city text-secondary text-xl"></i>
+            <p class="text-xs text-dark/80 m-0">
+                <strong>Nota:</strong> Las calles son empedradas y en cuesta. Se recomienda calzado cómodo para disfrutar del trayecto al evento.
+            </p>
+            </div>
+        </div>
+        
+        </div> 
+    </div>
+    </div>
+
+<div id="info-jerez" class="event-content hidden opacity-0 transition-all duration-500 mt-6">
+  
+  <div class="bg-white p-6 tablet:p-10 shadow-2xl rounded-sm">
+    
+    <div class="grid grid-cols-1 tablet:grid-cols-2 gap-10">
+      
+      <div class="hidden tablet:block w-full h-full min-h-[400px] overflow-hidden rounded-sm shadow-inner bg-dark/5 relative">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.867941335081!2d-6.125005624493407!3d36.69538667227714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc6c4b9ed95d5%3A0x80ec5ccdb8ec4aa3!2sIFECA-%20Palacio%20de%20exposiciones%20Lola%20Flores!5e1!3m2!1ses!2ses!4v1766800210041!5m2!1ses!2ses" 
+          class="absolute inset-0 w-full h-full border-none grayscale hover:grayscale-0 transition-all duration-1000" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="flex flex-col">
+        <a href="https://maps.app.goo.gl/ympBTsfAiHwuhZVbA" target="_blank" class="text-primary font-serif text-2xl no-underline flex items-center mb-2 hover:text-secondary">
+          <i class="fas fa-location-dot mr-3"></i> Dirección
+        </a>
+        <p class="text-dark/70 font-sans pl-8 mb-6 uppercase tracking-wider text-sm leading-relaxed">
+          AVENIDA DE LA UNIVERSIDAD, S/N <br> 11405 JEREZ DE LA FRONTERA
+        </p>
+
+        <h6 class="font-bold text-primary mb-1 uppercase text-xs tracking-widest">Zona / Referencia</h6>
+        <p class="text-dark/60 text-sm italic pl-8 mb-8 border-l-4 border-primary/20">
+          Ubicado junto a la Universidad de Cádiz (Campus de Jerez) y cerca del Parque González Hontoria.
+        </p>
+
+        <h5 class="font-serif text-xl text-primary mb-4 flex items-center">
+          <i class="fas fa-road mr-3"></i> Acceso y Transporte
+        </h5>
+        
+        <ul class="list-none p-0 pl-8 space-y-4">
+          <li class="text-sm flex items-start">
+            <i class="fas fa-car-side mr-3 text-secondary mt-1"></i>
+            <span>
+              <strong class="text-dark">Por carretera:</strong> Excelente acceso desde A-4 y A-382. **Dispone de amplio aparcamiento exterior gratuito.**
+            </span>
+          </li>
+          <li class="text-sm flex items-start">
+            <i class="fas fa-train mr-3 text-danger mt-1"></i>
+            <span>
+              <strong class="text-dark">Estación Central:</strong> A 15-20 min a pie o corto trayecto en taxi desde la estación de tren y autobuses.
+            </span>
+          </li>
+          <li class="text-sm flex items-start">
+            <i class="fas fa-bus mr-3 text-warning mt-1"></i>
+            <span>
+              <strong class="text-dark">Bus Urbano:</strong> Líneas 1 y 8 con parada en la zona universitaria.
+            </span>
+          </li>
+        </ul>
+
+        <div class="mt-8 p-4 bg-secondary/5 border-l-4 border-secondary flex items-center gap-4">
+          <i class="fas fa-square-parking text-secondary text-xl"></i>
+          <p class="text-xs text-dark/80 m-0">
+            <strong>Facilidades:</strong> A diferencia de Madrid o Toledo, en esta sede el acceso en vehículo privado es muy sencillo y recomendable.
+          </p>
+        </div>
+      </div>
+      
+    </div> 
+  </div>
+</div>
+</section>

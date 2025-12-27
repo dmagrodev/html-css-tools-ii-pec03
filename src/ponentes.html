@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>UOC Boilerplate</title>
+  </head>
+  <body>
+    <include src="./views/header.html" id = "inicio"></include>
+    <main class="bg-dark/30 min-h-screen pb-20">
+        <div class="container mx-auto px-4 py-16">
+            <header class="mb-16 text-center">
+                <h1 class="font-serif text-5xl tablet:text-6xl text-primary uppercase tracking-tighter mb-4">
+                    Expertos 
+                    <span class="text-secondary">Invitados</span>
+                </h1>
+                <p class="text-xl text-white/60 italic max-w-2xl mx-auto">
+                    Un elenco de chefs e investigadores dedicados a la preservación de la cocina ancestral.
+                </p>
+            </header>
+            
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Elena Gómez", "role": "Chef y Escritora", "img": "ponente-01-sm.jpg", "featured": "true", "bio": "Experta en la recuperación de recetas ancestrales de la región Mediterránea, con foco en el producto local."}'>
+                </include>
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Javier Ruíz", "role": "Investigador Gastronómico", "img": "ponente-02-sm.jpg", "featured": "false", "bio": "Especialista en técnicas de conservación y fermentación tradicionales aplicadas a la cocina moderna."}'>
+                </include>
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Miguel Ramos", "role": "Chef y Escritora", "img": "ponente-03-sm.jpg", "featured": "false", "bio":"Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña, defendiendo el uso de ingredientes de proximidad y el socarrat perfecto"}'>
+                </include>
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Elena Gómez", "role": "Chef y Escritora", "img": "ponente-04-sm.jpg", "featured": "true", "bio": "Experta en la recuperación de recetas ancestrales de la región Mediterránea, con foco en el producto local."}'>
+                </include>
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Javier Ruíz", "role": "Investigador Gastronómico", "img": "ponente-05-sm.jpg", "featured": "false", "bio": "Especialista en técnicas de conservación y fermentación tradicionales aplicadas a la cocina moderna."}'>
+                </include>
+                <include src="./views/ponente-card.html" 
+                        locals='{"name": "Miguel Ramos", "role": "Chef y Escritora", "img": "ponente-06-sm.jpg", "featured": "false", "bio":"Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña, defendiendo el uso de ingredientes de proximidad y el socarrat perfecto"}'>
+                </include>
+            </section> 
+        </div> 
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

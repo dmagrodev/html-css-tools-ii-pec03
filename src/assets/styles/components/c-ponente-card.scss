@@ -1,0 +1,33 @@
+@layer components {
+    .ponente-card {
+        @apply relative bg-white p-8 border-2 border-primary/5 rounded-sm 
+               flex flex-col items-center text-center h-full
+               transition-all duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2;
+
+        &--destacado {
+            @apply border-secondary bg-secondary/5 ring-1 ring-secondary/20 shadow-lg;
+            &::before {
+                // content: "Destacado";
+                @apply absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white 
+                       px-4 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full shadow-sm;
+            }
+        }
+
+        &__image {
+            @apply w-32 h-32 rounded-full object-cover mb-6 border-4 border-primary/10 
+                   grayscale hover:grayscale-0 transition-all duration-700 shadow-md;
+        }
+
+        &__name {
+            @apply font-serif text-2xl text-primary mb-1 uppercase tracking-tight;
+        }
+
+        &__title {
+            @apply text-secondary font-sans text-sm mb-4 tracking-wide;
+        }
+
+        &__bio {
+            @apply text-dark/70 text-sm leading-relaxed mb-6 flex-grow border-t border-primary/5 pt-4;
+        }
+    }
+}

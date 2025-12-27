@@ -1,0 +1,41 @@
+@use "sass:color";
+
+@layer components {
+    .navbar-brand__text {
+        @apply text-primary transition-colors;
+        
+        &::first-letter {
+        @apply font-black; /* Equivalente a font-weight: 800 */
+        }
+    }
+
+    .navbar-brand__logo {
+        @apply object-contain transition-all duration-300;
+
+        // Usamos el estado group-hover para que se active al pasar el ratón por el enlace
+        .group:hover & {
+        @apply scale-125 drop-shadow-[0_0_8px_var(--color-primary)];
+        }
+    }
+
+    .nav-link {
+        @apply px-5 py-2 font-serif text-dark transition-all w-full border-b-2 border-transparent no-underline block text-center;
+        &:hover {
+            @apply text-primary bg-primary/5 no-underline;
+        }
+
+        &.active {
+            @apply font-bold text-primary border-primary;
+        }
+    }
+
+    .menu-mobile-active {
+        @apply flex flex-col absolute top-full left-0 w-full bg-light shadow-2xl py-2 gap-4 z-40 border-primary shadow-2xl animate-fade-in-down;
+        
+    /* En móvil queremos los links más grandes y centrados */
+    .nav-link {
+        @apply text-xl;
+    }
+  }
+
+}

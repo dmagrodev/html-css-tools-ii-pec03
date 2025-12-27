@@ -1,0 +1,24 @@
+<div class="slider relative w-full overflow-hidden rounded-xl group shadow-2xl">
+    
+    <div class="slider__track flex transition-transform duration-500 ease-in-out">
+        <div class="slider__slide min-w-full flex-shrink-0">
+            <img src="./assets/images/f-portada-04.jpg" alt="Alta cocina" 
+                 class="slider__image block w-full h-[300px] md:h-[450px] object-cover">
+        </div>
+        <div class="slider__slide min-w-full flex-shrink-0">
+            <img src="./assets/images/f-portada-03.jpg" alt="Fuego lento" 
+                 class="slider__image block w-full h-[300px] md:h-[450px] object-cover">
+        </div>
+    </div>
+
+    <button class="slider__btn slider__btn--prev absolute top-1/2 left-1 z-10 -translate-y-1/2 bg-black/40 hover:bg-primary/90 text-white px-1 py-6 rounded-md transition-all opacity-80 hover:opacity-100 border-none cursor-pointer" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <button class="slider__btn slider__btn--next absolute top-1/2 right-1 z-10 -translate-y-1/2 bg-black/40 hover:bg-primary/90 text-white px-1 py-6 rounded-md transition-all opacity-80 hover:opacity-100 border-none cursor-pointer" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="slider__dots absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+    </div>
+</div>

@@ -1,12 +1,59 @@
+
 @use "sass:color";
+$uoc-masterbrand-hex: #73edff;
+$uoc-bg-hex: color.scale($uoc-masterbrand-hex, $lightness: 70%);
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+@theme {
+  /* Variables UOC para que el boilerplate no se rompa */
+  --color-uoc-corporate: #000078;
+  --color-uoc-masterbrand: #73edff;
+  --color-uoc-bg: #f3f4f6;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+              "Segoe UI Symbol";;
+  --font-serif: "Georgia", "Times New Roman", serif;
 
-$mqMinWidth: 420px;
+/* Paleta de colores Slow Fire */
+  --color-primary: #A84938;    /* Terracotta */
+  --color-secondary: #9eae65;  /* Olive */
+  --color-light: #F5F0E6;      /* Cream */
+  --color-dark: #333333;       /* Charcoal */
+
+/* Colores de estado */
+  --color-success: #4CAF50;
+  --color-danger: #F44336;
+  --color-warning: #FFC107;
+
+/* Personalización de componentes (Variables de diseño) */
+  --radius-card: 0.15rem;      /* $card-border-radius */
+  --radius-btn: 0.25rem;       /* $border-radius */
+
+  --shadow-slow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  --color-slow-orange: #f04e23;
+  --color-slow-dark: #2d2d2d;
+  --breakpoint-tablet: 900px;
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade-in-down: fade-in-down 0.5s ease-in-out forwards;
+}
+
+@layer components {
+  .uoc-container {
+    @apply mx-auto max-w-[800px] rounded-[2rem] bg-white p-8 text-center shadow-lg my-8;
+  }
+  .uoc-title {
+    @apply font-serif text-3xl font-bold text-uoc-corporate;
+  }
+}

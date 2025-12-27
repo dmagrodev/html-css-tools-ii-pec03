@@ -1,0 +1,8 @@
+@layer components {
+  .slider__dot {
+    @apply w-2.5 h-2.5 rounded-full bg-white/50 transition-colors cursor-pointer;
+    &--active {
+      @apply bg-white/40 scale-110;
+    }
+  }
+}
