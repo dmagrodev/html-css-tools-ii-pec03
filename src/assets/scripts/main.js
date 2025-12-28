@@ -9,6 +9,7 @@
 /**
  * Write any other JavaScript below
  */
+import datosPonentes from '../data/ponentes.json';
 
 +( function() {
   const university = "UOC";
@@ -213,6 +214,60 @@ window.toggleEvent = function(city) {
   });
 };
 // -----------------------------------------------------------------//
+// MODAL PONENTES
+// -----------------------------------------------------------------//
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-ponente');
+    const modalContent = document.getElementById('modal-content');
+    const closeBtn = document.getElementById('close-modal');
+
+    
+    // Capturamos todos los botones "Ver perfil"
+    const profileButtons = document.querySelectorAll('.ponente-card a');
+
+    profileButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = btn.closest('.ponente-card');
+            
+            // Extraemos info de la card clicada
+            const name = card.querySelector('.ponente-card__name').innerText;
+            const role = card.querySelector('.ponente-card__title').innerText;
+            const bio = card.querySelector('.ponente-card__bio').innerText;
+            const img = card.querySelector('img').src;
+
+            // Inyectamos en el modal
+            document.getElementById('modal-name').innerText = name;
+            document.getElementById('modal-role').innerText = role;
+            document.getElementById('modal-bio').innerText = bio;
+            document.getElementById('modal-img').src = img;
+
+            // Animación de apertura
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 50);
+        });
+    });
+
+    // Función cerrar
+    const closeModal = () => {
+        modalContent.classList.remove('scale-100', 'opacity-100');
+        modalContent.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }, 300);
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+});
+
+// -----------------------------------------------------------------//
 // LISTENER General
 // -----------------------------------------------------------------//
 document.addEventListener('DOMContentLoaded', initApp);
+// document.addEventListener('DOMContentLoaded', cargarPonentes);

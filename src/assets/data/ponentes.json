@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Elena Gómez",
+    "role": "Chef y Escritora Culinaria",
+    "img": "ponente-01-sm.jpg",
+    "bio": "Experta en la recuperación de recetas ancestrales de la región Mediterránea, con foco en el producto local y técnicas de cocción lenta.",
+    "featured": true,
+    "gallery": [
+      {
+        "photo": "ponente-01-01.jpg",
+        "name": "Arroz del Senyoret",
+        "description": "Técnica tradicional con leña de sarmiento."
+      },
+      {
+        "photo": "ponente-01-02.jpg",
+        "name": "Taller Maestro",
+        "description": "Sesión de formación sobre caldos base."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Javier Ruíz",
+    "role": "Investigador Gastronómico",
+    "img": "ponente-02-sm.jpg",
+    "bio": "Especialista en técnicas de conservación y fermentación tradicionales aplicadas a la cocina moderna y sostenible.",
+    "featured": false,
+    "gallery": []
+  },
+  {
+    "id": 3,
+    "name": "Miguel Ramos",
+    "role": "Especialista en Paellas",
+    "img": "ponente-03-sm.jpg",
+    "bio": "Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña y el 'socarrat' perfecto.",
+    "featured": false,
+    "gallery": []
+  },
+  {
+    "id": 4,
+    "name": "Ana Sánchez",
+    "role": "Panadera Artesana",
+    "img": "ponente-04-sm.jpg",
+    "bio": "Maestra en el arte de las masas madre y la recuperación de cereales antiguos para la panadería de fermentación larga.",
+    "featured": false,
+        "gallery": []
+  },
+  {
+    "id": 5,
+    "name": "Pedro Fernández",
+    "role": "Chef de Repostería",
+    "img": "ponente-05-sm.jpg",
+    "bio": "Líder en la reinterpretación de postres tradicionales con técnicas modernas y un enfoque en la reducción de azúcares procesados.",
+    "featured": false,
+        "gallery": []
+  },
+  {
+    "id": 6,
+    "name": "Pablo Vidal",
+    "role": "Historiador de la Alimentación",
+    "img": "ponente-06-sm.jpg",
+    "bio": "Dedicado a trazar el origen de los ingredientes y las costumbres alimentarias que han dado forma a nuestra cultura actual.",
+    "featured": false,
+        "gallery": []
+  }
+]

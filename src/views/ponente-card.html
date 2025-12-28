@@ -1,22 +1,23 @@
-<article class="ponente-card {{featured === 'true' ? 'ponente-card--destacado' : ''}}">
-    <div class="flex justify-center mb-6">
-        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-            <img src="assets/images/{{img}}" 
-                 alt="{{name}}" 
-                 class="w-full h-full object-cover rounded-full">
-        </div>
-    </div>
-
-    <div class="flex flex-col items-center flex-grow text-center  px-4 pb-6">
-        <h3 class="ponente-card__name">{{name}}</h3>
-        <p class="ponente-card__title">{{role}}</p>
-        
-        <p class="ponente-card__bio">
-            {{bio}}
-        </p>
-
-        <button class="ponente-card__btn mt-auto">
-            Ver perfil
-        </button>
-    </div>
+<article class="ponente-card {{featured === 'true' ? 'ponente-card--destacado' : ''}} group">
+  <div class="ponente-card__image-container">
+      <picture>
+        <source srcset="assets/images/{{img}}?as=avif&width=300" type="image/avif">
+        <img src="assets/images/{{img}}?width=300" 
+             alt="{{name}}" 
+             class="ponente-card__image"
+             onerror="this.onerror=null; this.src='assets/images/ponente-00-md.jpg';">
+      </picture>
+  </div>
+  
+  <div class="text-center flex flex-col flex-grow">
+    <h3 class="ponente-card__name">{{name}}</h3>
+    <p class="ponente-card__title">{{role}}</p>
+    <p class="ponente-card__bio">{{bio}}</p>
+    <a href="#" class="mt-auto block w-full py-3 px-6 text-center text-[10px] font-bold uppercase tracking-widest text-white transition-all duration-300 shadow-md 
+                {{featured === 'true' ? 'bg-secondary hover:bg-primary' : 'bg-primary hover:bg-secondary'}} 
+                hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
+        Ver perfil
+    </a>
+  </div>
 </article>
+
