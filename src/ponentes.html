@@ -21,28 +21,39 @@
                     Un elenco de chefs e investigadores dedicados a la preservación de la cocina ancestral.
                 </p>
             </header>
-          <section id="grid-ponentes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" -->
+          <section id="grid-ponentes" class="flex flex-wrap justify-center gap-12">
+        <!-- class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" -->
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">
                 <include src="./views/ponente-card.html" 
                         locals='{"name": "Elena Gómez", "role": "Chef y Escritora", "img": "ponente-01-sm.jpg", "featured": "true", "bio": "Experta en la recuperación de recetas ancestrales de la región Mediterránea, con foco en el producto local."}'>
                 </include>
+            </div>
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">
                 <include src="./views/ponente-card.html" 
                         locals='{"name": "Javier Ruíz", "role": "Investigador Gastronómico", "img": "ponente-02-sm.jpg", "featured": "false", "bio": "Especialista en técnicas de conservación y fermentación tradicionales aplicadas a la cocina moderna."}'>
                 </include>
+            </div>
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">    
                 <include src="./views/ponente-card.html" 
-                        locals='{"name": "Miguel Ramos", "role": "Chef y Escritora", "img": "ponente-03-sm.jpg", "featured": "false", "bio":"Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña, defendiendo el uso de ingredientes de proximidad y el socarrat perfecto"}'>
+                        locals='{"name": "Miguel Ramos", "role": "Especialista en Paellas", "img": "ponente-03-sm.jpg", "featured": "false", "bio":"Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña, defendiendo el uso de ingredientes de proximidad y el socarrat perfecto"}'>
                 </include>
+            </div>
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">
                 <include src="./views/ponente-card.html" 
-                        locals='{"name": "Elena Gómez", "role": "Chef y Escritora", "img": "ponente-04-sm.jpg", "featured": "false", "bio": "Experta en la recuperación de recetas ancestrales de la región Mediterránea, con foco en el producto local."}'>
+                        locals='{"name": "Ana Sanchez", "role": "Panadero Artesano", "img": "ponente-04-sm.jpg", "featured": "false", "bio": "Maestro en el arte de las masas madre y la recuperación de cereales antiguos para la panadería."}'>
                 </include>
+            </div>
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">
                 <include src="./views/ponente-card.html" 
-                        locals='{"name": "Javier Ruíz", "role": "Investigador Gastronómico", "img": "ponente-05-sm.jpg", "featured": "false", "bio": "Especialista en técnicas de conservación y fermentación tradicionales aplicadas a la cocina moderna."}'>
+                        locals='{"name": "Pedro Fernandez", "role": "Chef de Repostería", "img": "ponente-05-sm.jpg", "featured": "false", "bio": "Líder en la reinterpretación de postres tradicionales con técnicas modernas y un toque minimalista."}'>
                 </include>
+                </div>
+            <div class="w-full md:w-[calc(50%-3rem)] lg:w-[calc(33.333%-4rem)]">
                 <include src="./views/ponente-card.html" 
-                        locals='{"name": "Miguel Ramos", "role": "Chef y Escritora", "img": "ponente-06-sm.jpg", "featured": "false", "bio":"Maestro paellero de la Comunidad Valenciana. Su trabajo se centra en la recuperación de técnicas ancestrales a leña, defendiendo el uso de ingredientes de proximidad y el socarrat perfecto"}'>
+                        locals='{"name": "Pablo Vidal", "role": "Historiador de la Alimentación", "img": "ponente-06-sm.jpg", "featured": "false", "bio":"Dedicado a trazar el origen de los ingredientes y las costumbres alimentarias a lo largo de los siglos."}'>
                 </include>
+              </div>
             </section> 
         </div> 
     </main>
