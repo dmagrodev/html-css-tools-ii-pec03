@@ -28,11 +28,9 @@ const initNavbar = () => {
 
     if (btn && menu) {
         btn.addEventListener('click', () => {
-            // Alternamos las clases de Tailwind
             menu.classList.toggle('hidden');
             menu.classList.toggle('menu-mobile-active');
 
-            // Cambio de icono de FontAwesome (bars <-> xmark)
             if (icon) {
                 if (icon.classList.contains('fa-bars')) {
                     icon.classList.replace('fa-bars', 'fa-xmark');
@@ -42,7 +40,6 @@ const initNavbar = () => {
             }
         });
 
-        // Opcional: Cerrar el menú si se hace clic en un enlace (útil en One Page)
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
@@ -71,7 +68,6 @@ class imageSlider {
         this.autoAdvanceTime = 7000;
         this.autoAdvanceInterval = null;
 
-        // Inicializar el slider
         this.createDots();
         this.addEventListeners();
         this.startAutoAdvance();
@@ -166,7 +162,7 @@ const initApp = () => {
 
     initNavbar();
 
-    const allSliders = document.querySelectorAll('.slider'); //Collect de todos los sliders de la pagina
+    const allSliders = document.querySelectorAll('.slider');
     
     allSliders.forEach(sliderElement => {
         new imageSlider(sliderElement);
@@ -191,15 +187,12 @@ const initApp = () => {
 
 
 window.toggleEvent = function(city) {
-  // 1. Buscamos todos los bloques de contenido
   const contents = document.querySelectorAll('.event-content');
   
   contents.forEach(content => {
-    // 2. Si es el que hemos clicado, lo mostramos, si no, lo ocultamos
     if (content.id === `info-${city}`) {
       const isHidden = content.classList.contains('hidden');
       
-      // Resetear todos primero para que solo haya uno abierto
       contents.forEach(c => {
         c.classList.add('hidden');
         c.classList.remove('opacity-100');
@@ -207,7 +200,6 @@ window.toggleEvent = function(city) {
 
       if (isHidden) {
         content.classList.remove('hidden');
-        // Un pequeño delay para que la transición de opacidad funcione
         setTimeout(() => content.classList.add('opacity-100'), 10);
       }
     }
@@ -221,28 +213,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalContent = document.getElementById('modal-content');
     const closeBtn = document.getElementById('close-modal');
 
-    
-    // Capturamos todos los botones "Ver perfil"
     const profileButtons = document.querySelectorAll('.ponente-card a');
 
     profileButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const card = btn.closest('.ponente-card');
-            
-            // Extraemos info de la card clicada
+
             const name = card.querySelector('.ponente-card__name').innerText;
             const role = card.querySelector('.ponente-card__title').innerText;
             const bio = card.querySelector('.ponente-card__bio').innerText;
             const img = card.querySelector('img').src;
 
-            // Inyectamos en el modal
             document.getElementById('modal-name').innerText = name;
             document.getElementById('modal-role').innerText = role;
             document.getElementById('modal-bio').innerText = bio;
             document.getElementById('modal-img').src = img;
 
-            // Animación de apertura
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             setTimeout(() => {
@@ -252,7 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Función cerrar
     const closeModal = () => {
         modalContent.classList.remove('scale-100', 'opacity-100');
         modalContent.classList.add('scale-95', 'opacity-0');
