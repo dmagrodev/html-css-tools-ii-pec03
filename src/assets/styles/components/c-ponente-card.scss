@@ -13,23 +13,20 @@
             @apply border-secondary bg-light ring-1 ring-secondary/20 shadow-lg;
 
             &::before {
-                //  content: "Destacado";
                 @apply absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-white 
                        px-4 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full shadow-sm;
             }
         }
 
         &__image-container {
-            // Necesitamos un contenedor con overflow-hidden para que el zoom no se salga
             @apply w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/10 
                    transition-all duration-700 shadow-md;
         }
 
         &__image {
-            // Efecto Zoom: la imagen escalará dentro de su contenedor
             @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
             .ponente-card:hover & {
-                @apply scale-125; // Zoom del 25%
+                @apply scale-125; 
             }
         }
 
